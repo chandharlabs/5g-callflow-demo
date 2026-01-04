@@ -205,7 +205,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
-
+{*/
       
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[120] w-[90%] max-w-2xl hidden md:block">
         <div className="bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 flex flex-col gap-6">
@@ -256,7 +256,7 @@ const App: React.FC = () => {
               <button onClick={handleRestart} className="p-3 text-slate-400 hover:text-indigo-600 transition-colors" title="Restart">
                 <RotateCcw size={20} className="stroke-[2.5px]" />
               </button>
-            </div>
+            </div> 
 
             
             <div className="flex items-center gap-1.5">
@@ -292,7 +292,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>*
-      </div> 
+      </div> */}
 
       <style>{`
         .action-btn-small {
