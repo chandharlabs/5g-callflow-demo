@@ -1,0 +1,5 @@
+{
+  "name": "5G Full animation",
+  "description": "Interactive 5G Full Architecture visualization with timeline scrubbing, speed control, and zoom capabilities.",
+  "requestFramePermissions": []
+}
