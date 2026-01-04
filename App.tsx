@@ -180,10 +180,10 @@ const App: React.FC = () => {
           />
           {/* Text */}
           <div className="text-center">
-            <h1 className="text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">
+            <h1 className="text-xs sm:text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">
               Interactive 5G Call Flow Visualizer
             </h1>
-            <h2 className="text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase">
+            <h2 className="text-[10px] sm:text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase text-center">
               Chandhar Research Labs Pvt. Ltd.
             </h2>
           </div>
@@ -195,16 +195,19 @@ const App: React.FC = () => {
       </header>
 
       {/* Diagram Container */}
-      <main className="flex-grow overflow-auto relative bg-white custom-scrollbar">
+      <main className="flex-grow overflow-x-hidden overflow-y-auto relative bg-white custom-scrollbar">
         <div className="w-full flex justify-center py-4">
-          <div ref={containerRef} className="relative">
+          <div
+            ref={containerRef}
+            className="relative w-full max-w-full overflow-x-auto"
+          >
             <Diagram width={viewBoxW} height={viewBoxH} />
           </div>
         </div>
       </main>
-{/*
+
       
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[120] w-[90%] max-w-2xl">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[120] w-[90%] max-w-2xl hidden md:block">
         <div className="bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 flex flex-col gap-6">
           
           
@@ -289,7 +292,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>*
-      </div> */}
+      </div> 
 
       <style>{`
         .action-btn-small {

@@ -200,7 +200,11 @@ const Diagram: React.FC<DiagramProps> = React.memo(({ width, height }) => {
         .clickable-nf { cursor: pointer; }
       `}</style>
       
-      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        preserveAspectRatio="xMidYMin meet"
+        style={{ width: '100%', height: 'auto', maxWidth: '100vw' }}
+      >
         <rect width="100%" height="100%" fill="transparent"/>
         
         {/* Core Frame */}
