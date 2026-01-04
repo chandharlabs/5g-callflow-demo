@@ -161,17 +161,7 @@ const App: React.FC = () => {
       {/* Header - Adjusted for centering and symbol removal */}
       <header className="shrink-0 bg-white border-b border-slate-100 px-6 py-3 flex items-center justify-between z-[105] min-h-[72px]">
         {/* Empty left spacer to maintain center alignment */}
-        <div className="w-[200px] hidden md:block"></div>
-        
-        
-        {/* Centered Heading */}
-        {/*
-        <div className="flex-grow text-center">
-          <h1 className="text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">Interactive 5G Call Flow Visualizer</h1>
-          <h2 className="text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase">Chandhar Research Labs Pvt. Ltd.</h2>
-        </div> */}
-        
-        <div className="flex-grow flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-5 w-full">
           {/* Logo */}
           <img
               src={logo}
