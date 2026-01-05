@@ -10,6 +10,9 @@ const Diagram: React.FC<DiagramProps> = React.memo(({ width, height }) => {
   return (
     <div className="bg-white">
       <style>{`
+        .master-timeline {
+          animation: masterClock 240s linear infinite;
+        }
         .block {
           fill: transparent;
           stroke: #333;
@@ -57,7 +60,10 @@ const Diagram: React.FC<DiagramProps> = React.memo(({ width, height }) => {
           0%, 100% { stroke-width: 2; }
           50% { stroke-width: 6; }
         }
-
+        @keyframes masterClock {
+          from { opacity: 1; }
+          to   { opacity: 1; }
+        }
         @keyframes drawLine {
           to { opacity: 1; }
         }
@@ -199,12 +205,8 @@ const Diagram: React.FC<DiagramProps> = React.memo(({ width, height }) => {
         /* Cursor Styling for clickable elements */
         .clickable-nf { cursor: pointer; }
       `}</style>
+      <svg className="master-timeline" width={width} height={height} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none">
       
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
-        preserveAspectRatio="xMidYMin meet"
-        style={{ width: '100%', height: 'auto', maxWidth: '100vw' }}
-      >
         <rect width="100%" height="100%" fill="transparent"/>
         
         {/* Core Frame */}

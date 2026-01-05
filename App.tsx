@@ -161,7 +161,16 @@ const App: React.FC = () => {
       {/* Header - Adjusted for centering and symbol removal */}
       <header className="shrink-0 bg-white border-b border-slate-100 px-6 py-3 flex items-center justify-between z-[105] min-h-[72px]">
         {/* Empty left spacer to maintain center alignment */}
-        <div className="flex items-center justify-center gap-5 w-full">
+        
+        
+        {/* Centered Heading */}
+        {/*
+        <div className="flex-grow text-center">
+          <h1 className="text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">Interactive 5G Call Flow Visualizer</h1>
+          <h2 className="text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase">Chandhar Research Labs Pvt. Ltd.</h2>
+        </div> */}
+        
+        <div className="flex-grow flex items-center justify-center gap-3">
           {/* Logo */}
           <img
               src={logo}
@@ -170,10 +179,10 @@ const App: React.FC = () => {
           />
           {/* Text */}
           <div className="text-center">
-            <h1 className="text-xs sm:text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">
+            <h1 className="text-sm md:text-lg font-black text-slate-800 tracking-tight leading-none uppercase">
               Interactive 5G Call Flow Visualizer
             </h1>
-            <h2 className="text-[10px] sm:text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase text-center">
+            <h2 className="text-[12px] md:text-[14px] font-black text-slate-700 tracking-widest uppercase">
               Chandhar Research Labs Pvt. Ltd.
             </h2>
           </div>
@@ -185,25 +194,22 @@ const App: React.FC = () => {
       </header>
 
       {/* Diagram Container */}
-      <main className="flex-grow overflow-x-hidden overflow-y-auto relative bg-white custom-scrollbar">
+      <main className="flex-grow overflow-auto relative bg-white custom-scrollbar">
         <div className="w-full flex justify-center py-4">
-          <div
-            ref={containerRef}
-            className="relative w-full max-w-full overflow-x-auto"
-          >
+          <div ref={containerRef} className="relative">
             <Diagram width={viewBoxW} height={viewBoxH} />
           </div>
         </div>
       </main>
-{/*
+
       
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[120] w-[90%] max-w-2xl hidden md:block">
-        <div className="bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 flex flex-col gap-6">
+      <div className="fixed bottom-6 left-1/2 -translate-x-[40%] z-[120] w-[70%] max-w-xl">
+        <div className="bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-2 flex flex-col gap-2 scale-90">
           
           
           <div className="w-full group">
             <div className="flex justify-between mb-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-              <span>0s</span>
+              <span>{currentTime.toFixed(1)}s</span>
               <span className="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Scrub to Forward/Backward</span>
               <span>{TOTAL_DURATION}s</span>
             </div>
@@ -246,7 +252,7 @@ const App: React.FC = () => {
               <button onClick={handleRestart} className="p-3 text-slate-400 hover:text-indigo-600 transition-colors" title="Restart">
                 <RotateCcw size={20} className="stroke-[2.5px]" />
               </button>
-            </div> 
+            </div>
 
             
             <div className="flex items-center gap-1.5">
@@ -282,7 +288,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <style>{`
         .action-btn-small {
