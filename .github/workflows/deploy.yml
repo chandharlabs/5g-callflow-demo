@@ -33,6 +33,9 @@ jobs:
       - name: Build project
         run: npm run build -- --base ./
 
+      - name: Copy CNAME
+        run: cp CNAME dist/CNAME
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
